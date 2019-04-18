@@ -56,10 +56,10 @@ public class SplashActivity extends BaseActivity implements SplashFragmnet.OnSpl
 
     /** 接收在线程发出的message **/
     private static class CountHandler extends AbstractStaticHandler<SplashActivity> {
-        public CountHandler(SplashActivity context) {
+
+        CountHandler(SplashActivity context) {
             super(context);
         }
-
         @Override
         public void handleMessage(Message msg, SplashActivity splashActivity) {
             switch (msg.what){
