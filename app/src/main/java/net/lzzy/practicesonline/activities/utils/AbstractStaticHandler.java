@@ -28,6 +28,7 @@ public abstract class AbstractStaticHandler<T> extends Handler {
      * @param msg Message 对象
      * @param t Activity or Fragment对象
      */
+
     public abstract void handleMessage(Message msg,T t);
 }
 

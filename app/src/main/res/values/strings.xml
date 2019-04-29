@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PracticesOnline</string>
+    <string name="fragment_practices_synchronized">正在同步......</string>
+    <string name="fragment_practices_time">2019.01.24 10:22:50</string>
 </resources>

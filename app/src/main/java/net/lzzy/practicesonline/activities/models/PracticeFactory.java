@@ -28,7 +28,7 @@ public class PracticeFactory {
     public Practice getById(String id){
         return repository.getById(id);
     }
-    public List<Practice> searchPractice(String kw) throws InstantiationException, IllegalAccessException {
+    public List<Practice> searchPractice(String kw) {
         try {
             return repository.getByKeyword(kw,new String[]{Practice.COL_NAME,Practice.COL_OUTLINES},false);
         }catch (IllegalAccessException|InstantiationException e){
@@ -50,7 +50,7 @@ public class PracticeFactory {
     }
 
     public boolean addPractice(Practice practice){
-        if(!isPracticeDb(practice)){
+        if(isPracticeDb(practice)){
             return false;
         }
         repository.insert(practice);

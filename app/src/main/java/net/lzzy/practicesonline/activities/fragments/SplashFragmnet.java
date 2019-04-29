@@ -24,7 +24,7 @@ public class SplashFragmnet extends BaseFragment {
 
     @Override
     public int getLayoutRes() {
-        return R.layout.fragmet_splash;
+        return R.layout.fragment_splash;
     }
 
     @Override

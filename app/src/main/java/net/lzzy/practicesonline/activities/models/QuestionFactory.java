@@ -53,7 +53,7 @@ public class QuestionFactory {
         List<Option> options=optionSqlRepository.getByKeyword(question.getId().toString(),
                 new String[]{Option.COL_QUESTION_ID},true);
         question.setOptions(options);
-        question.setDbType(question.getOptions());
+        question.setDbType(question.getDbType());
     }
 
     /***/
