@@ -5,7 +5,9 @@ package net.lzzy.practicesonline.activities.models.view;
  * Description:
  */
 public enum QuestionType {
-    SINGLE_CHOIOICE("单项选择"),MULTI_CHOICE("不定项选择"),JUDGE("判断");
+
+    SINGLE_CHOICE("单项选择"),MULTI_CHOICE("不定项选择"),JUDGE("判断");
+
     private  String name;
     QuestionType(String name) {
         this.name = name;

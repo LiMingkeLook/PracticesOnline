@@ -43,10 +43,11 @@ public class QuestionFactory {
         try {
             Question question=repository.getById(questionId);
             completeQuestion(question);
+            return question;
         } catch (InstantiationException|IllegalAccessException e) {
             e.printStackTrace();
+            return  null;
         }
-        return  null;
     }
 
     private void completeQuestion(Question question) throws InstantiationException, IllegalAccessException {

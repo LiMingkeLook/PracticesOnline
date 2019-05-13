@@ -239,8 +239,6 @@ public class PracticesFragment extends BaseFragment {
         });
     }
 
-
-
     private void downloadPracticesAsync() {
         new PracticeDownloader(this).execute();
     }
@@ -319,6 +317,7 @@ public class PracticesFragment extends BaseFragment {
         };
         lv.setAdapter(adapter);
     }
+
     private void slideToDelete(MotionEvent event, Button button,Practice practice) {
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
@@ -357,7 +356,7 @@ public class PracticesFragment extends BaseFragment {
         }
     }
 
-   //异步下载
+    //异步下载
     private void downloadQuestion(Practice practice) {
         new QuestionDownloader(this,practice).execute();
     }
@@ -393,9 +392,9 @@ public class PracticesFragment extends BaseFragment {
         practices.clear();
         if (kw.isEmpty()){
             practices.addAll(factory.get());
-        }else {
-            practices.addAll(factory.searchPractice(kw));
+        }else {practices.addAll(factory.searchPractice(kw));
         }
+
         adapter.notifyDataSetChanged();
     }
 

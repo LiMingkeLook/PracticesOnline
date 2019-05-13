@@ -78,7 +78,7 @@ public class Question extends BaseEntity implements Sqlitable, Jsonable {
     }
 
     public List<Option> getOptions() {
-            return options;
+        return options;
     }
 
     public void setOptions(List<Option> options) {

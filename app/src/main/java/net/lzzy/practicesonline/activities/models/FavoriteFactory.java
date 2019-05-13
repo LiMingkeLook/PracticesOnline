@@ -43,7 +43,6 @@ public class FavoriteFactory {
 
     //判断是否被收藏
     public boolean isQuestionStarred(String questionId){
-
         try {
             List<Favorite> favorites=repository.getByKeyword(questionId,
                     new String[]{Favorite.COL_QUESTION_ID},true);

@@ -27,6 +27,7 @@ import java.nio.file.FileAlreadyExistsException;
  */
 public class ViewUtils {
 
+    private static Context context;
     private static AlertDialog dialog;
     //显示进度条
     public static void showProgress(Context context,String message){
@@ -36,7 +37,7 @@ public class ViewUtils {
             tv.setText(message);
             dialog=new AlertDialog.Builder(context).create();
             dialog.setView(view);
-        }dialog.show();
+         }dialog.show();
     }
 
     //隐藏进度条
@@ -44,6 +45,15 @@ public class ViewUtils {
         if (dialog!=null&&dialog.isShowing()){
             dialog.dismiss();
         }
+    }
+    public static int px2dp(int pxValue) {
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
+    public static int dp2px(int dpValue,Context context) {
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
     }
 
     public static void gotoSetting(Context context){

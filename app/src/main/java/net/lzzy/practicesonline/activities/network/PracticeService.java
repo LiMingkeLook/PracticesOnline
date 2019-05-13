@@ -2,6 +2,7 @@ package net.lzzy.practicesonline.activities.network;
 
 import net.lzzy.practicesonline.activities.constants.ApiConstants;
 import net.lzzy.practicesonline.activities.models.Practice;
+import net.lzzy.practicesonline.activities.models.view.PractceResult;
 import net.lzzy.sqllib.JsonConverter;
 
 import org.json.JSONException;
@@ -24,6 +25,9 @@ public class PracticeService  {
         return converter.getArray(json);
     }
 
+    public static int postResult(PractceResult result) throws JSONException, IOException {
+        return ApiService.okPost(ApiConstants.URL_RELT,result.toJson());
+    }
 
 
 }
