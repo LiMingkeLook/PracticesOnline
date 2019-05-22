@@ -64,19 +64,19 @@ public class PractceResult {
 
     private String getWrongOrders(){
         //错误题目的序号，比如1、2、3
-        int i=0;
-        String ids="";
+    int i=0;
+    String ids="";
         for (QuestionResult result:results){
-            i++;
-            if (!result.isRight()){
-              ids=ids.concat(i+ STRING);
-            }
+        i++;
+        if (!result.isRight()){
+            ids=ids.concat(i+ STRING);
         }
-        if (ids.endsWith(STRING)){
-            ids=ids.substring(0,ids.length()-1);
-        }
-        return ids;
     }
+        if (ids.endsWith(STRING)){
+        ids=ids.substring(0,ids.length()-1);
+    }
+        return ids;
+}
 
     public JSONObject toJson() throws JSONException {
         JSONObject json=new JSONObject();

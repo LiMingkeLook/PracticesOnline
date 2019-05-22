@@ -20,6 +20,8 @@ android {
         sourceCompatibility = '1.8'
         targetCompatibility = '1.8'
     }
+
+
 }
 
 dependencies {
@@ -34,4 +36,5 @@ dependencies {
     implementation project(':sqllib')
     implementation("com.squareup.okhttp3:okhttp:3.14.1")
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
